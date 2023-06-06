@@ -1,0 +1,202 @@
+/*fonts*/
+
+h1 {
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 24px;
+    color: black;
+}
+
+h2 {
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 22px;
+    color: black;
+}
+
+p {
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 20px;
+    color: black;
+}
+
+ul {
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 20px;
+    color: black;
+}
+
+/*Regular links*/
+
+.reglink {
+    color: #68a6a6;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+.reglink a:hover {
+    background-color: #012326;
+    color: whitesmoke;
+}
+
+.reglink a:visited {
+    color: #68a6a6;
+    text-decoration: none;
+}
+
+/*header*/
+
+header {
+    background-color: #BABDBF;
+    text-align: center;
+    padding: 10px 10px 10px 10px;
+    border-radius: 1rem;
+}
+
+/*body*/
+
+body {
+    background-color: #d9d9d9;
+}
+
+
+/*footer*/
+
+footer {
+    background-color: #BABDBF;
+    text-align: center;
+    padding: 5px 5px 5px 5px;
+    margin-top: 20px;
+    border-radius: 1rem;
+}
+
+/*random things*/
+
+.homepage {
+    display: flex;
+    flex-flow: row nowrap;
+    justify-content: center;
+}
+
+/*nav take 2*/
+
+nav {
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 20px;
+    border-top: 2px solid #68a6a6;
+    border-bottom: 2px solid #68a6a6;
+    margin: 10px 0 10px 0;
+    text-align: center;
+}
+
+nav a {
+    text-decoration: none;
+    color: white;
+    border-radius: .5rem;
+    display: block;
+    padding: .75rem;
+}
+
+nav li {
+    list-style-type: none;
+    display: inline-block;
+    background: #4e4d59;
+    border-radius: .5rem;
+    margin: 0 1rem 0 1rem;
+}
+
+.servicelevel {
+    display: flex;
+    flex-flow: row nowrap;
+    align-items: stretch;
+}
+
+.mirror_production {
+    display: flex;
+    flex-flow: row nowrap;
+    align-items: stretch;
+}
+
+.dev_environment {
+    display: flex;
+    flex-flow: row nowrap;
+    align-items: stretch;
+}
+
+::after, .dev {
+    content: "";
+    display: table;
+    clear: both;
+}
+
+::after, .mirrorprod {
+    content: "";
+    display: table;
+    clear: both;
+}
+
+::after, .articlecollection {
+    content: "";
+    display: table;
+    clear: both;
+}
+
+img {
+    border-radius: 10px;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+/*tooltip*/
+
+.tooltip {
+	position: relative; /* making the .tooltip span the container for a tooltip text */
+	border-bottom: 1px dashed red; /* little indicator to indicate it's hoverable */
+}
+
+.tooltip:before {
+	content: attr(data-text); /* here's the magic */
+	position: absolute;
+	top: 50%; 
+	transform: translateY(-50%); /* this line and the line above are for vertical centering */
+	left: 100%;
+	margin-left: 15px; /* this line and the line above are for adding a small left margin */
+	width: 200px;
+	padding: 10px;
+	border-radius: 10px;
+	background: orange; 
+	color: #ffff; 
+	text-align: center; /* this line and the previous three lines are for general styles */
+	display: none; /* hide by default */ 
+}
+
+.tooltip:hover:before {
+	display: block;
+}
+
+.tooltip.left:before {
+	/* reset defaults */ 
+	left: initial;
+	margin: initial;
+	/* set new values */
+	right: 100%;
+	margin-right: 15px;
+}
+
+.tooltip:after {
+	content: "";
+	position: absolute;
+	/* position tooltip correctly */
+	left: 100%;
+	margin-left: -5px;
+	/* vertically center */
+	top: 50%;
+	transform: translateY(-50);
+	/* the arrow */
+	border: 10px solid green;
+	border-color: transparent black transparent transparent;
+	display: none;
+}
+
+.tooltip:hover:before, .tooltip:hover:after {
+	display: block;
+}
